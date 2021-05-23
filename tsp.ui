@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TSP</class>
+ <widget class="QMainWindow" name="TSP">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>931</width>
+    <height>581</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TSP</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>qwerty.jpg</normaloff>qwerty.jpg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QMainWindow
+{
+background-image: url(:/123.jpg);
+};
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>10</y>
+      <width>501</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout"/>
+   </widget>
+   <widget class="QPushButton" name="Btn_Add_Top">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+  background-color: rgb(215, 215, 215);
+  border: 1px solid gray;
+}
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);
+}</string>
+    </property>
+    <property name="text">
+     <string>Добавить город</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn_Add_Edge_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>50</y>
+      <width>371</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+  background-color: rgb(215, 215, 215);
+  border: 1px solid gray;
+}
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);
+}</string>
+    </property>
+    <property name="text">
+     <string>Добавим двусторонюю дорогу между городами</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Btn_Calculate">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>280</y>
+      <width>341</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Stencil</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+  background-color: rgb(215, 215, 215);
+  border: 1px solid gray;
+ border-radius: 80px;
+}
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);
+}</string>
+    </property>
+    <property name="text">
+     <string>Решить</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="city1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(71, 71, 71);
+  color: white; 
+  border: 1px solid black;
+ border-radius: 10px;
+    border-style: outset;
+   
+    padding: 5px;
+pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}</string>
+    </property>
+    <property name="text">
+     <string>Первый город</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="City1">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>140</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 71, 71);
+  color: white; 
+  border: 1px solid black;
+ border-radius: 8px;
+    border-style: outset;
+   
+    padding: 5px;
+pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}
+QLable {
+  qproperty-alignment: 'AlignVCenter | AlignRight';
+ }
+
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="s">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>240</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(71, 71, 71);
+  color: white; 
+  border: 1px solid black;
+ border-radius: 10px;
+    border-style: outset;
+   
+    padding: 5px;
+pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}</string>
+    </property>
+    <property name="text">
+     <string>Расстояние</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="S">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>240</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 71, 71);
+  color: white; 
+  border: 1px solid black;
+ border-radius: 8px;
+    border-style: outset;
+   
+    padding: 5px;
+pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}</string>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="city2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(71, 71, 71);
+  color: white; 
+  border: 1px solid black;
+ border-radius: 10px;
+    border-style: outset;
+   
+    padding: 5px;
+pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}</string>
+    </property>
+    <property name="text">
+     <string>Второй город</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="City2">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>190</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 71, 71);
+  color: white; 
+  border: 1px solid black;
+ border-radius: 8px;
+    border-style: outset;
+   
+    padding: 5px;
+pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}</string>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_Result">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>460</y>
+      <width>311</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(168, 168, 129);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_Path_length">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>500</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(168, 168, 129);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="L_Clear">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>530</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(120, 71, 30);
+  color: white; 
+  border: 1px solid black;
+ border-radius: 8px;
+    border-style: outset;
+   
+    padding: 5px;
+pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}</string>
+    </property>
+    <property name="text">
+     <string>Clear</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
